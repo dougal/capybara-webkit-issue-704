@@ -9,6 +9,8 @@ describe 'Showing the type of an attached file', js: true do
 
       console_messages  = page.driver.console_messages.map{|msg| msg[:message]}
 
+      p console_messages
+
       expect(console_messages).to include('Type is: video/mp4')
     end
 
