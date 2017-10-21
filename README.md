@@ -1,3 +1,5 @@
+# Issue is now fixed!
+
 Capybara-Webkit [Issue #704 - `type` property of file field is empty](https://github.com/thoughtbot/capybara-webkit/issues/704)
 ===================================================================
 
