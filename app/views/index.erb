@@ -2,29 +2,34 @@
 <head>
   <title>Breaking Example App</title>
 
-  <script type="text/javascript">
-
-  show_type = function() {
-    var file_field_el = document.getElementById('file_field')
-
-    var file          = file_field_el.files[0]
-    var type          = file.type
-
-    // Output the result to the log.
-    window.console.log("Type is: " + type)
-  }
-
-  </script>
-
 </head>
 <body>
 
-  <form onSubmit="show_type()" action="#">
+  <form action="#">
     <label for="file_field">File</label>
     <input type="file" name="file_field" id="file_field" />
 
     <input type="submit" value="Show Type" />
   </form>
+
+
+
+  <script type="text/javascript">
+
+    var form = document.querySelector('form')
+    form.addEventListener('submit', function(e){
+      e.preventDefault()
+
+      var file_field_el = document.getElementById('file_field')
+
+      var file          = file_field_el.files[0]
+      var type          = file.type
+
+      // Output the result to the log.
+      window.console.log("Type is: " + type)
+    })
+
+  </script>
 
 </body>
 </html>
